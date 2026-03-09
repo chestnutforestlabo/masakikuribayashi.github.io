@@ -29,7 +29,7 @@ author:
   bio              : "Ph.D. | HCI and Accessibility Researcher"
   location         : "Tokyo, Japan"
   employer         : "Waseda University"
-  uri              : "https://www.masakikuribayashi.com/"
+  uri              : # URL
   email            : "rugbykuribayashi@toki.waseda.jp"
 
   # Academic websites
@@ -38,7 +38,7 @@ author:
   googlescholar    : https://scholar.google.co.jp/citations?user=fdEcI_MAAAAJ
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/0000-0001-8412-223X"
+  orcid            : # URL
   semantic         : # URL
   ssrn             : # URL
   pubmed           : # URL
