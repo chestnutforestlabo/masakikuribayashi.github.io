@@ -13,13 +13,10 @@ Download
 ======
 - [Resume (PDF)](/files/Masaki_Kuribayashi_Resume.pdf)
 
-Summary
-======
-Final-year Ph.D. candidate at Waseda University focused on accessibility and HCI. Research interests include assistive navigation for blind and low-vision users using multimodal AI, computer vision, robotics, and smartphone systems.
 
 Education
 ======
-- **Doctor of Engineering**, Waseda University, Graduate School of Advanced Science and Engineering (Apr. 2023 - Present)
+- **Doctor of Engineering**, Waseda University, Graduate School of Advanced Science and Engineering (Apr. 2023 - Mar. 2026)
   - Major: Accessibility, Human-Computer Interaction, Computer Vision
   - Advisor: Shigeo Morishima
 - **Master of Engineering**, Waseda University, Graduate School of Advanced Science and Engineering (Apr. 2021 - Mar. 2023)
@@ -32,7 +29,7 @@ Research Experience
 ======
 - **Research Fellow (DC1), JSPS Research Fellowship for Young Scientists** (Apr. 2023 - Present)
   - Advisor: Shigeo Morishima
-- **Intern, Woven by Toyota** (Aug. 2025 - Present)
+- **Intern, Woven by Toyota** (Aug. 2025 - Oct. 2025)
   - Advisor: Kei Nitta
 - **Part-time Researcher, Accessibility Lab, Miraikan** (Aug. 2024 - Jul. 2025)
   - Advisors: Hironobu Takagi, Chieko Asakawa
@@ -71,16 +68,3 @@ Academic Service
 - Associate Reviewer: CHI LBW
 - CHI 2025 Assistant of Local Arrangement Chair (Organizing Committee)
 - Post-CHI Miraikan Networking Event Organizer
-
-Talks and Presentations (Selected)
-======
-- May 2025: *WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People*, CHI 2025 Symposium
-- Mar. 2025: *PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings*, Global Creative Leaders Society, The University of Tokyo
-- Feb. 2025: *Research Introduction; Map-less Navigation System for Blind People*, A11y Meetup, Cybozu (Japan)
-- Sep. 2024: *PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings*, Forum on Information Technology (FIT 2024)
-- Nov. 2023: *PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings*, WISS 2023
-- May 2023: *Introduction to Accessibility Research*, Hong Kong Japanese School
-
-Publications
-======
-- Full publication list: [Publications](/publications/)
