@@ -337,6 +337,19 @@ def render_generic_item(
     return " | ".join(chunks) if chunks else "-"
 
 
+def render_news_item(index: int, row: dict[str, str]) -> str:
+    date = clean_text(row.get("date", ""))
+    title = clean_text(row.get("title", ""))
+    url = clean_text(row.get("url", "")) or clean_text(row.get("link", ""))
+
+    title_part = f"[{title}]({url})" if (title and URL_RE.match(url)) else title
+    if date and title_part:
+        return f"{index}. {date}: {title_part}"
+    if title_part:
+        return f"{index}. {title_part}"
+    return f"{index}. -"
+
+
 def build_section_entries(csv_path: Path, data_dir: Path) -> list[str]:
     fieldnames, rows = read_csv_rows(csv_path)
     columns = used_columns(fieldnames, rows)
@@ -372,7 +385,23 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
         "",
     ]
 
-    # 1) Projects (derived from full papers + opted-in short papers)
+    # 1) News
+    news_csv = get_csv_by_relative_path(data_dir, csv_files, "news.csv")
+    news_rows: list[dict[str, str]] = []
+    if news_csv is not None:
+        _, rows = read_csv_rows(news_csv)
+        news_rows = sort_rows_newest_first(rows)
+
+    lines.append("## News")
+    lines.append("")
+    if news_rows:
+        for i, row in enumerate(news_rows, start=1):
+            lines.append(f"{render_news_item(i, row)}<br>")
+    else:
+        lines.append("_No data available._<br>")
+    lines.append("")
+
+    # 2) Projects (derived from full papers + opted-in short papers)
     en_main = get_csv_by_relative_path(data_dir, csv_files, "en/publications.csv")
     en_short = get_csv_by_relative_path(data_dir, csv_files, "en/publications_short.csv")
     full_rows_newest: list[dict[str, str]] = []

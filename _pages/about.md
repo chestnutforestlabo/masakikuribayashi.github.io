@@ -13,6 +13,12 @@ Resercher at Miraikan Accessibility Lab.
 
 <div class="long-form-content" markdown="1">
 
+## News
+
+1. 2026-03-10: [Started a new project on assistive indoor navigation with multimodal models.](https://example.com/news/assistive-navigation-kickoff)<br>
+2. 2026-02-22: [Presented our latest accessibility research at a university seminar.](https://example.com/news/university-seminar)<br>
+3. 2026-01-15: [Released updated publication and project pages on this website.](https://example.com/news/site-update)<br>
+
 ## Projects
 
 <div class="project-list">
