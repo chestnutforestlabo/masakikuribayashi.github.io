@@ -11,6 +11,8 @@ Resercher at Miraikan Accessibility Lab.
 
 **Reserach Interest**: Assitive Navigation for Blind People, Vision and Language Navigation
 
+<div class="long-form-content" markdown="1">
+
 ## Projects
 
 <div class="project-list">
@@ -18,136 +20,113 @@ Resercher at Miraikan Accessibility Lab.
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Time-Aware Assistive Navigation" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Time-Aware Assistive Navigation</div>
-    <div class="project-item__venue">ICRA</div>
+    <div class="project-item__venue">ICRA 2026</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Robot-Assisted Group Tours for Blind People" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Robot-Assisted Group Tours for Blind People</div>
-    <div class="project-item__venue">CHI</div>
+    <div class="project-item__venue">CHI 2026</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People</div>
-    <div class="project-item__venue">CHI</div>
+    <div class="project-item__venue">CHI 2026</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments.</div>
-    <div class="project-item__venue">Augmented Humans 2025 (AHs 2025)</div>
+    <div class="project-item__venue">AHs 2025</div>
+    <div class="project-item__authors">Toshihiro Hirano, Yichen Peng, <strong class="project-item__self">Masaki Kuribayashi</strong>, Erwin Wu, Shigeo Morishima, and Hideki Koike</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People.</div>
-    <div class="project-item__venue">Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025)</div>
+    <div class="project-item__venue">CHI 2025</div>
+    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong>, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions.</div>
-    <div class="project-item__venue">Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025; Honorable Mention)</div>
+    <div class="project-item__venue">CHI 2025</div>
+    <div class="project-item__authors">Yusuke Miura, Chi-Lan Yang, <strong class="project-item__self">Masaki Kuribayashi</strong>, Keigo Matsumoto, Hideki Kuzuoka, and Shigeo Morishima</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People.</div>
-    <div class="project-item__venue">IEEE Robotics and Automation Letters (RA-L)</div>
+    <div class="project-item__venue">RA-L 2025</div>
+    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi*</strong>, Kohei Uehara*, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima (* - equal contribution)</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall.</div>
-    <div class="project-item__venue">Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024)</div>
+    <div class="project-item__venue">MobileHCI 2024</div>
+    <div class="project-item__authors">Yuka Kaniwa*, <strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa, Daisuke Sato, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima (* - equal contribution)</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Snap&amp;Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Snap&amp;Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection.</div>
-    <div class="project-item__venue">Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024)</div>
+    <div class="project-item__venue">MobileHCI 2024</div>
+    <div class="project-item__authors">Masaya Kubota*, <strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima (* - equal contribution)</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Text to Blind Motion." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Text to Blind Motion.</div>
-    <div class="project-item__venue">Neural Information Processing Systems (NeurIPS 2024)</div>
+    <div class="project-item__venue">NeurIPS 2024</div>
+    <div class="project-item__authors">Hee Jae Kim, Kathakoli Sengupta, <strong class="project-item__self">Masaki Kuribayashi</strong>, Hernisa Kacorri, Eshed Ohn-Bar</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings.</div>
-    <div class="project-item__venue">Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI 2023)</div>
+    <div class="project-item__venue">CHI 2023</div>
+    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong>, Tatsuya Ishihara, Daisuke Sato, Jayakorn Vongkulbhisal, Karnik Ram, Seita Kayukawa, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Exploration of Sonification Feedback for People with Visual Impairment to Use Ski Simulator." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Exploration of Sonification Feedback for People with Visual Impairment to Use Ski Simulator.</div>
-    <div class="project-item__venue">Augmented Humans 2023 (AHs 2023)</div>
+    <div class="project-item__venue">AHs 2023</div>
+    <div class="project-item__authors">Yusuke Miura, Erwin Wu, <strong class="project-item__self">Masaki Kuribayashi</strong>, Hideki Koike, Shigeo Morishima</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections.</div>
-    <div class="project-item__venue">Proceedings of the 24th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2022)</div>
+    <div class="project-item__venue">MobileHCI 2022</div>
+    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong>, Seita Kayukawa, Jayakorn Vongkulbhisal, Daisuke Sato, Chieko Asakawa, Hironobu Takagi, Shigeo Morishima</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line.</div>
-    <div class="project-item__venue">Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (CHI 2021; Azusa Ono Memorial Award)</div>
+    <div class="project-item__venue">CHI 2021</div>
+    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa*, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (* - equal contribution)</div>
+    <div class="project-item__award">Award: Azusa Ono Memorial Award</div>
   </div>
 </div>
 </div>
-
-<div class="long-form-content" markdown="1">
-
-## English Publications
-
-### Full Papers
-
-1. **Masaki Kuribayashi**\*, Seita Kayukawa\*, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (\* - equal contribution). **LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line.**. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (CHI 2021; Azusa Ono Memorial Award). (2021). [DOI](https://dl.acm.org/doi/10.1145/3411764.3445451)<br>
-2. **Masaki Kuribayashi**, Seita Kayukawa, Jayakorn Vongkulbhisal, Daisuke Sato, Chieko Asakawa, Hironobu Takagi, Shigeo Morishima. **Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections.**. Proceedings of the 24th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2022). (2022).<br>
-3. **Masaki Kuribayashi**, Tatsuya Ishihara, Daisuke Sato, Jayakorn Vongkulbhisal, Karnik Ram, Seita Kayukawa, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings.**. Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI 2023). (2023).<br>
-4. Yusuke Miura, Erwin Wu, **Masaki Kuribayashi**, Hideki Koike, Shigeo Morishima. **Exploration of Sonification Feedback for People with Visual Impairment to Use Ski Simulator.**. Augmented Humans 2023 (AHs 2023). (2023).<br>
-5. Yuka Kaniwa\*, **Masaki Kuribayashi**\*, Seita Kayukawa, Daisuke Sato, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima (\* - equal contribution). **ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall.**. Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024). (2024).<br>
-6. Masaya Kubota\*, **Masaki Kuribayashi**\*, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima (\* - equal contribution). **Snap&Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection.**. Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024). (2024).<br>
-7. Hee Jae Kim, Kathakoli Sengupta, **Masaki Kuribayashi**, Hernisa Kacorri, Eshed Ohn-Bar. **Text to Blind Motion.**. Neural Information Processing Systems (NeurIPS 2024). (2024).<br>
-8. Toshihiro Hirano, Yichen Peng, **Masaki Kuribayashi**, Erwin Wu, Shigeo Morishima, and Hideki Koike. **SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments.**. Augmented Humans 2025 (AHs 2025). (2025).<br>
-9. **Masaki Kuribayashi**, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa. **WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People.**. Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025). (2025).<br>
-10. Yusuke Miura, Chi-Lan Yang, **Masaki Kuribayashi**, Keigo Matsumoto, Hideki Kuzuoka, and Shigeo Morishima. **Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions.**. Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025; Honorable Mention). (2025).<br>
-11. **Masaki Kuribayashi**\*, Kohei Uehara\*, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima (\* - equal contribution). **Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People.**. IEEE Robotics and Automation Letters (RA-L). (2025).<br>
-12. **Time-Aware Assistive Navigation**. ICRA. (2026).<br>
-13. **Robot-Assisted Group Tours for Blind People**. CHI. (2026).<br>
-14. **How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People**. CHI. (2026).<br>
-
-### Short Papers
-
-15. **Masaki Kuribayashi**, Seita Kayukawa, Jayakorn Vongkulbhisal, Daisuke Sato, Chieko Asakawa, Hironobu Takagi, Shigeo Morishima. **Designing a Smartphone-Based Assistance System for Blind People to Recognize Intersections and Obstacles in Indoor Corridors.**. Mobile and Ubiquitous Systems (Mobiquitous 2021). (2021).<br>
-16. Yusuke Miura, **Masaki Kuribayashi**, Erwin Wu, Hideki Koike, Shigeo Morishima. **A Study on Sonification Method of Simulator-Based Ski Training for People with Visual Impairment.**. SIGGRAPH Asia 2022 Posters (SA '22 Posters). (2022).<br>
-17. **Masaki Kuribayashi**, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima. **Textual and Directional Sign Recognition Algorithm for People with Visual Impairment by Linking Texts and Arrows.**. CVPR 2023 AVA: Accessibility, Vision, and Autonomy Meet Workshop. (2023).<br>
-18. Hee Jae Kim, Kathakoli Sengupta, **Masaki Kuribayashi**, Hernisa Kacorri, Eshed Ohn-Bar. **A Multi-Modal Dataset for Urban Navigation by Blind Individuals.**. ASSETS 2024 Workshop. (2024).<br>
-19. **Masaki Kuribayashi**, Kohei Uehara, Allan Wang, Daisuke Sato, Simon Chu, and Shigeo Morishima. **Memory-Maze: Benchmark and Visual Language Navigation Model for Guiding Blind People.**. Robotics: Science and Systems Assistive Robotics Workshop (RSS 2024 Workshop). (2024).<br>
-20. **`Thank God I’m Fly!'': A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions.**. CHI 2026 Posters. (2025).<br>
-21. Yuta Taguchi, Toshihiro Hirano, **Masaki Kuribayashi**, Yichen Peng, Erwin Wu, Hideki Koike, Shigeo Morishima. **Spatial Audio for Ski Simulation with Visually Impaired Users in Dynamic Environments.**. SIGGRAPH Asia 2025 Posters (SA '25 Posters). (2025).<br>
-22. Masaya Kubota, **Masaki Kuribayashi**, Renato Ribeiro, and Shigeo Morishima. **Investigating Blind People's Route Perception of Complex Pre-Mapped Routes in Virtual Reality.**. The ACM Symposium on User Interface Software and Technology (UIST 2025). (2025).<br>
-23. **Masaki Kuribayashi**, Kohei Uehara, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima. **Memory-Maze: Scenario Driven Benchmark and Visual Language Navigation Model for Guiding Blind People.**. Human-Centered Robot Learning in the Era of Big Data and Large Models (ICRA 2025 Workshop). (2025).<br>
-
-Japanese publications are available [here](/japanese_publication/).<br>
 
 ## Awards
 

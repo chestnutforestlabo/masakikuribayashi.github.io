@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate _pages/about.md from all CSV files under data/."""
+"""Generate profile markdown pages from CSV files under data/."""
 
 from __future__ import annotations
 
@@ -32,6 +32,14 @@ author_profile: true
 
 ## Japanese Publications
 """
+PUBLICATION_TOP_BLOCK = """---
+permalink: /publication/
+title: "Publications"
+author_profile: true
+---
+
+## Publications
+"""
 
 LONG_FORM_OPEN = '<div class="long-form-content" markdown="1">'
 LONG_FORM_CLOSE = "</div>"
@@ -39,7 +47,7 @@ LONG_FORM_CLOSE = "</div>"
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate _pages/about.md from all CSV files under data/."
+        description="Generate _pages markdown files from all CSV files under data/."
     )
     parser.add_argument(
         "--data-dir",
@@ -55,6 +63,11 @@ def parse_args() -> argparse.Namespace:
         "--jp-output",
         default="_pages/japanese_publication.md",
         help="Output markdown file path for Japanese publications (default: _pages/japanese_publication.md)",
+    )
+    parser.add_argument(
+        "--publication-output",
+        default="_pages/publication.md",
+        help="Output markdown file path for consolidated publications page (default: _pages/publication.md)",
     )
     return parser.parse_args()
 
@@ -238,21 +251,43 @@ def resolve_project_image_path(raw: str) -> str:
 
 def render_project_item(row: dict[str, str]) -> str:
     title = clean_plain_text(row.get("title", ""))
+    authors = clean_plain_text(row.get("authors", ""))
     venue = clean_plain_text(row.get("venue", ""))
+    award = clean_plain_text(row.get("award", ""))
     image_path = resolve_project_image_path(row.get("image", ""))
 
     title_html = html.escape(title or "Untitled Project")
+    authors_html = html.escape(authors)
+    authors_html = re.sub(
+        r"Masaki Kuribayashi(\*)?",
+        r'<strong class="project-item__self">Masaki Kuribayashi\1</strong>',
+        authors_html,
+    )
+    authors_html = re.sub(
+        r"栗林雅希(\*)?",
+        r'<strong class="project-item__self">栗林雅希\1</strong>',
+        authors_html,
+    )
     venue_html = html.escape(venue)
+    award_html = html.escape(award)
     image_html = html.escape(image_path, quote=True)
     alt_html = html.escape(title or "Project image", quote=True)
+
+    body_lines = [
+        f'    <div class="project-item__title">{title_html}</div>',
+        f'    <div class="project-item__venue">{venue_html}</div>',
+    ]
+    if authors_html:
+        body_lines.append(f'    <div class="project-item__authors">{authors_html}</div>')
+    if award_html:
+        body_lines.append(f'    <div class="project-item__award">Award: {award_html}</div>')
 
     return "\n".join(
         [
             '<div class="project-item">',
             f'  <div class="project-item__media"><img src="{image_html}" alt="{alt_html}" loading="lazy"></div>',
             '  <div class="project-item__body">',
-            f'    <div class="project-item__title">{title_html}</div>',
-            f'    <div class="project-item__venue">{venue_html}</div>',
+            *body_lines,
             "  </div>",
             "</div>",
         ]
@@ -333,9 +368,11 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
     lines: list[str] = [
         ABOUT_TOP_BLOCK.rstrip(),
         "",
+        LONG_FORM_OPEN,
+        "",
     ]
 
-    # 1) English publications (merge both English publication CSV files)
+    # 1) Projects (derived from full papers + opted-in short papers)
     en_main = get_csv_by_relative_path(data_dir, csv_files, "en/publications.csv")
     en_short = get_csv_by_relative_path(data_dir, csv_files, "en/publications_short.csv")
     full_rows_newest: list[dict[str, str]] = []
@@ -364,38 +401,6 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
         lines.append("_No data available._")
     lines.append("")
 
-    lines.append(LONG_FORM_OPEN)
-    lines.append("")
-    lines.append("## English Publications")
-    lines.append("")
-    pub_index = 1
-
-    lines.append("### Full Papers")
-    lines.append("")
-    if en_main is None:
-        lines.append("_No data available._<br>")
-    else:
-        if not full_rows_oldest:
-            lines.append("_No data available._<br>")
-        for row in full_rows_oldest:
-            lines.append(f"{render_publication_item(pub_index, row)}<br>")
-            pub_index += 1
-
-    lines.append("")
-    lines.append("### Short Papers")
-    lines.append("")
-    if en_short is None:
-        lines.append("_No data available._<br>")
-    else:
-        if not short_rows_oldest:
-            lines.append("_No data available._<br>")
-        for row in short_rows_oldest:
-            lines.append(f"{render_publication_item(pub_index, row)}<br>")
-            pub_index += 1
-    lines.append("")
-    lines.append("Japanese publications are available [here](/japanese_publication/).<br>")
-    lines.append("")
-
     # 2) Remaining sections in requested order
     ordered_sections = [
         ("awards.csv", "Awards"),
@@ -418,6 +423,69 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
     lines.append(LONG_FORM_CLOSE)
     lines.append("")
 
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def build_publication_markdown(data_dir: Path, csv_files: list[Path]) -> str:
+    en_main = get_csv_by_relative_path(data_dir, csv_files, "en/publications.csv")
+    en_short = get_csv_by_relative_path(data_dir, csv_files, "en/publications_short.csv")
+    jp_csv = get_csv_by_relative_path(data_dir, csv_files, "jp/publications.csv")
+
+    full_rows_oldest: list[dict[str, str]] = []
+    short_rows_oldest: list[dict[str, str]] = []
+    jp_rows_oldest: list[dict[str, str]] = []
+
+    if en_main is not None:
+        _, rows = read_csv_rows(en_main)
+        full_rows_oldest = sort_rows_oldest_first(rows)
+    if en_short is not None:
+        _, rows = read_csv_rows(en_short)
+        short_rows_oldest = sort_rows_oldest_first(rows)
+    if jp_csv is not None:
+        _, rows = read_csv_rows(jp_csv)
+        jp_rows_oldest = sort_rows_oldest_first(rows)
+
+    lines: list[str] = [
+        PUBLICATION_TOP_BLOCK.rstrip(),
+        "",
+        LONG_FORM_OPEN,
+        "",
+        "### English Publications",
+        "",
+        "#### Full Papers",
+        "",
+    ]
+
+    pub_index = 1
+    if not full_rows_oldest:
+        lines.append("_No data available._<br>")
+    else:
+        for row in full_rows_oldest:
+            lines.append(f"{render_publication_item(pub_index, row)}<br>")
+            pub_index += 1
+
+    lines.append("")
+    lines.append("#### Short Papers")
+    lines.append("")
+    if not short_rows_oldest:
+        lines.append("_No data available._<br>")
+    else:
+        for row in short_rows_oldest:
+            lines.append(f"{render_publication_item(pub_index, row)}<br>")
+            pub_index += 1
+
+    lines.append("")
+    lines.append("### Japanese Publications")
+    lines.append("")
+    if not jp_rows_oldest:
+        lines.append("_No data available._<br>")
+    else:
+        for i, row in enumerate(jp_rows_oldest, start=1):
+            lines.append(f"{render_publication_item(i, row)}<br>")
+
+    lines.append("")
+    lines.append(LONG_FORM_CLOSE)
+    lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -454,6 +522,7 @@ def main() -> int:
     data_dir = Path(args.data_dir).resolve()
     output_path = Path(args.output).resolve()
     jp_output_path = Path(args.jp_output).resolve()
+    publication_output_path = Path(args.publication_output).resolve()
 
     if not data_dir.exists() or not data_dir.is_dir():
         raise SystemExit(f"Data directory not found: {data_dir}")
@@ -465,11 +534,14 @@ def main() -> int:
     about_markdown = build_markdown(data_dir, csv_files)
     output_path.write_text(about_markdown, encoding="utf-8")
 
+    publication_markdown = build_publication_markdown(data_dir, csv_files)
+    publication_output_path.write_text(publication_markdown, encoding="utf-8")
+
     jp_markdown = build_japanese_publications_markdown(data_dir, csv_files)
     jp_output_path.write_text(jp_markdown, encoding="utf-8")
 
     print(
-        f"Generated {output_path} and {jp_output_path} from {len(csv_files)} CSV files."
+        f"Generated {output_path}, {publication_output_path}, and {jp_output_path} from {len(csv_files)} CSV files."
     )
     return 0
 
