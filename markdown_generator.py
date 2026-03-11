@@ -114,7 +114,8 @@ def clean_text(text: str) -> str:
 
 
 def emphasize_author_names(text: str) -> str:
-    # Keep plain text (no bold) for a consistent visual style.
+    text = re.sub(r"Masaki Kuribayashi(\*)?", r"**Masaki Kuribayashi**\1", text)
+    text = re.sub(r"栗林雅希(\*)?", r"**栗林雅希**\1", text)
     return text
 
 
@@ -164,7 +165,7 @@ def render_publication_item(index: int, row: dict[str, str]) -> str:
     if authors:
         parts.append(authors)
     if title:
-        parts.append(f"\"{title}\"")
+        parts.append(f"**{title}**")
     if venue:
         parts.append(venue)
     if year:
@@ -190,29 +191,35 @@ def render_publication_item(index: int, row: dict[str, str]) -> str:
     return f"{index}. {sentence}".rstrip()
 
 
-def render_generic_item(columns: list[str], row: dict[str, str], date_last: bool = False) -> str:
+def render_generic_item(
+    columns: list[str], row: dict[str, str], date_last: bool = False, bold_title: bool = False
+) -> str:
     lower_cols = {c.lower() for c in columns}
     date = clean_text(row.get("date", ""))
     title = clean_text(row.get("title", ""))
     venue = clean_text(row.get("venue", ""))
     url = clean_text(row.get("url", "")) or clean_text(row.get("link", ""))
 
+    title_display = f"**{title}**" if (bold_title and title) else title
+
     if "title" in lower_cols and ("url" in lower_cols or "link" in lower_cols) and len(columns) <= 3:
         if URL_RE.match(url):
-            return f"[{title}]({url})" if title else f"[Link]({url})"
+            if title:
+                return f"[{title_display}]({url})"
+            return f"[Link]({url})"
         if title and url:
-            return f"{title} ({url})"
+            return f"{title_display} ({url})"
         if title:
-            return title
+            return title_display
 
     if date and title and venue:
         if date_last:
-            return f"{title} ({venue}) - {date}"
-        return f"{date}: {title} ({venue})"
+            return f"{title_display} ({venue}) - {date}"
+        return f"{date}: {title_display} ({venue})"
     if date and title:
         if date_last:
-            return f"{title} - {date}"
-        return f"{date}: {title}"
+            return f"{title_display} - {date}"
+        return f"{date}: {title_display}"
 
     chunks: list[str] = []
     for col in columns:
@@ -243,7 +250,11 @@ def build_section_entries(csv_path: Path, data_dir: Path) -> list[str]:
         "fellowships.csv",
         "articles.csv",
     }
-    entries = [render_generic_item(columns, row, date_last=date_last) for row in rows]
+    bold_title = rel in {"awards.csv", "academic_service.csv", "talks.csv", "fellowships.csv"}
+    entries = [
+        render_generic_item(columns, row, date_last=date_last, bold_title=bold_title)
+        for row in rows
+    ]
     if rel in {"awards.csv", "academic_service.csv", "articles.csv", "fellowships.csv", "talks.csv"}:
         return [f"{i}. {entry}" for i, entry in enumerate(entries, start=1)]
     return entries
