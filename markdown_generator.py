@@ -365,9 +365,9 @@ def render_bio_item(row: dict[str, str]) -> str:
     date = clean_text(row.get("date", ""))
     title = clean_text(row.get("title", ""))
     if date and title:
-        return f"- {date}: {title}"
+        return f"- {date}: **{title}**"
     if title:
-        return f"- {title}"
+        return f"- **{title}**"
     if date:
         return f"- {date}"
     return "- -"

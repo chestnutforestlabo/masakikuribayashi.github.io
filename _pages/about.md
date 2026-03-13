@@ -22,12 +22,12 @@ Resercher at Miraikan Accessibility Lab.
 
 ## Bio
 
-- Apr. 2023 - Current: Research Fellow of the Japan Society for the Promotion of Science (DC1)<br>
-- Aug. 2024 - Current: Part Time Researcher, Miraikan Accessibility Lab, Miraikan - The National Museum of Emerging Science and Innovation<br>
-- Aug. 2025 - Oct. 2025: Intern, Woven By Toyota<br>
-- Jan. 2024 - May. 2025: Visiting Researcher, H2X lab, Boston University, Advisor: Eshed Ohn-Bar<br>
-- Apr. 2021 - Jan. 2024: Research Intern, IBM Research - Tokyo, Advisor: Hironobu Takagi, Chieko Asakawa, Tatsuya Ishihara<br>
-- Jun. 2022 - Sept. 2022: Visiting Researcher, Cognitive Assistance Lab, Carnegie Mellon University, Advisor: Daisuke Sato, Chieko Asakawa<br>
+- Apr. 2023 - Current: **Research Fellow of the Japan Society for the Promotion of Science (DC1)**<br>
+- Aug. 2024 - Current: **Part Time Researcher, Miraikan Accessibility Lab, Miraikan - The National Museum of Emerging Science and Innovation**<br>
+- Aug. 2025 - Oct. 2025: **Intern, Woven By Toyota**<br>
+- Jan. 2024 - May. 2025: **Visiting Researcher, H2X lab, Boston University, Advisor: Eshed Ohn-Bar**<br>
+- Apr. 2021 - Jan. 2024: **Research Intern, IBM Research - Tokyo, Advisor: Hironobu Takagi, Chieko Asakawa, Tatsuya Ishihara**<br>
+- Jun. 2022 - Sept. 2022: **Visiting Researcher, Cognitive Assistance Lab, Carnegie Mellon University, Advisor: Daisuke Sato, Chieko Asakawa**<br>
 
 ## Projects
 
