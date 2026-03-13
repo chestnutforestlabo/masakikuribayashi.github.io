@@ -149,6 +149,30 @@ Resercher at Miraikan Accessibility Lab.
     <div class="project-item__award">Award: Azusa Ono Memorial Award</div>
   </div>
 </div>
+<div class="project-item">
+  <div class="project-item__media"><img src="/images/papers/ikegami_chi_2026.png" alt="`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions" loading="lazy"></div>
+  <div class="project-item__body">
+    <div class="project-item__title">`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions</div>
+    <div class="project-item__venue">CHI 2026 Posters</div>
+    <div class="project-item__authors">Ikegami Momoka, <strong class="project-item__self">Masaki Kuribayashi</strong>, Takuya Kato, Saizo Aoyagi, Tatsunori Hirai</div>
+  </div>
+</div>
+<div class="project-item">
+  <div class="project-item__media"><img src="/images/papers/taguchi_2025_siggraphasia.png" alt="Spatial Audio for Ski Simulation with Visually Impaired Users in Dynamic Environments" loading="lazy"></div>
+  <div class="project-item__body">
+    <div class="project-item__title">Spatial Audio for Ski Simulation with Visually Impaired Users in Dynamic Environments</div>
+    <div class="project-item__venue">SA 2025 Posters</div>
+    <div class="project-item__authors">Yuta Taguchi, Toshihiro Hirano, <strong class="project-item__self">Masaki Kuribayashi</strong>, Yichen Peng, Erwin Wu, Hideki Koike, Shigeo Morishima</div>
+  </div>
+</div>
+<div class="project-item">
+  <div class="project-item__media"><img src="/images/papers/kubota_uist_2025.png" alt="Investigating Blind People&#x27;s Route Perception of Complex Pre-Mapped Routes in Virtual Reality" loading="lazy"></div>
+  <div class="project-item__body">
+    <div class="project-item__title">Investigating Blind People&#x27;s Route Perception of Complex Pre-Mapped Routes in Virtual Reality</div>
+    <div class="project-item__venue">UIST 2025 Posters</div>
+    <div class="project-item__authors">Masaya Kubota, <strong class="project-item__self">Masaki Kuribayashi</strong>, Renato Ribeiro, and Shigeo Morishima</div>
+  </div>
+</div>
 </div>
 
 ## Awards
