@@ -9,7 +9,7 @@ redirect_from:
 
 Resercher at Miraikan Accessibility Lab.
 
-**Reserach Interest**: Assitive Navigation for Blind People, Vision and Language Navigation
+**Reserach Interest**: Human Computer Interaction (HCI), Accessibility, Human-Centered AI
 
 <div class="long-form-content" markdown="1">
 
