@@ -1,0 +1,41 @@
+make generated_cv.pdf
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[11pt, a4paper]{awesome-cv}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\colorlet{awesome}{awesome-red}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\IfFontExistsTF{Hiragino Sans}{%
+  \newfontfamily\jpfont{Hiragino Sans}%
+}{%
+  \newfontfamily\jpfont{HaranoAjiGothic-Medium}%
+}
+
+\photo[circle,noedge,right]{../data/image/profile.jpg}
+\name{Masaki}{Kuribayashi}
+\position{Ph.D. Candidate{\enskip\cdotp\enskip}HCI Researcher}
+\address{Tokyo, Japan}
+\email{rugbykuribayashi@toki.waseda.jp}
+\github{chestnutforestlabo}
+\linkedin{masaki-kuribayashi}
+\twitter{chestnut\_forest}
+\googlescholar{fdEcI\_MAAAAJ}{}
+
+\begin{document}
+\makecvheader
+\makecvfooter
+  {\today}
+  {Masaki Kuribayashi~~~\textperiodcentered~~~Curriculum Vitae}
+  {\thepage}
+
+\input{generated/education.tex}
+\input{generated/experience.tex}
+\input{generated/publications.tex}
+\input{generated/talks.tex}
+\input{generated/writing.tex}
+\input{generated/honors.tex}
+\input{generated/service.tex}
+
+\end{document}
