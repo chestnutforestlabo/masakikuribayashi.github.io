@@ -234,7 +234,7 @@ def render_publication_item(index: int, row: dict[str, str]) -> str:
     if venue:
         venue_part = venue
         if paper_href:
-            venue_part = f"{venue_part} [pdf]({paper_href})"
+            venue_part = f"{venue_part} {render_pdf_icon_link(paper_href)}"
         parts.append(venue_part)
     if award:
         parts.append(f"Award: {award}")
@@ -280,6 +280,17 @@ def resolve_site_href(raw: str) -> str:
     return f"/{normalized}"
 
 
+def render_pdf_icon_link(href: str) -> str:
+    link_href = html.escape(href, quote=True)
+    icon_src = html.escape("/images/pdf_icon.png", quote=True)
+    return (
+        f'<a href="{link_href}" target="_blank" rel="noopener noreferrer" '
+        f'style="display:inline-flex;vertical-align:middle;margin-left:0.2em;">'
+        f'<img src="{icon_src}" alt="PDF" '
+        f'style="height:1em;width:auto;vertical-align:middle;"></a>'
+    )
+
+
 def resolve_doi_url(raw: str) -> str:
     value = clean_plain_text(raw)
     if not value:
@@ -314,10 +325,7 @@ def render_project_item(row: dict[str, str]) -> str:
     )
     venue_html = html.escape(venue)
     if paper_href:
-        paper_html = html.escape(paper_href, quote=True)
-        venue_html = (
-            f'{venue_html} <a href="{paper_html}" target="_blank" rel="noopener noreferrer">[pdf]</a>'
-        )
+        venue_html = f"{venue_html} {render_pdf_icon_link(paper_href)}"
     award_html = html.escape(award)
     image_html = html.escape(image_path, quote=True)
     alt_html = html.escape(title or "Project image", quote=True)
