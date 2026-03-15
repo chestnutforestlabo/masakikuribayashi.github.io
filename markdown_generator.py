@@ -188,10 +188,16 @@ def format_cell(key: str, raw: str) -> str:
         return f"[DOI]({doi_url})"
 
     if key_lower in {"url", "link", "paper_url", "slides"}:
-        if URL_RE.match(value):
-            label = "Slides" if key_lower == "slides" else "Link"
-            return f"[{label}]({value})"
-        return value
+        href = resolve_site_href(value)
+        if not href:
+            return "-"
+        if key_lower == "slides":
+            label = "Slides"
+        elif key_lower == "paper_url" and href.lower().endswith(".pdf"):
+            label = "PDF"
+        else:
+            label = "Link"
+        return f"[{label}]({href})"
 
     if URL_RE.match(value):
         return f"[Link]({value})"
@@ -218,6 +224,7 @@ def render_publication_item(index: int, row: dict[str, str]) -> str:
     title = clean_text(row.get("title", ""))
     venue = clean_text(row.get("venue", ""))
     award = clean_text(row.get("award", ""))
+    paper_href = resolve_site_href(row.get("paper_url", ""))
 
     parts: list[str] = []
     if authors:
@@ -225,12 +232,15 @@ def render_publication_item(index: int, row: dict[str, str]) -> str:
     if title:
         parts.append(f"**{title}**")
     if venue:
-        parts.append(venue)
+        venue_part = venue
+        if paper_href:
+            venue_part = f"{venue_part} [pdf]({paper_href})"
+        parts.append(venue_part)
     if award:
         parts.append(f"Award: {award}")
 
     links: list[str] = []
-    for key in ("doi", "paper_url", "url", "slides"):
+    for key in ("doi", "url", "slides"):
         value = clean_text(row.get(key, ""))
         if not value:
             continue
@@ -260,6 +270,16 @@ def resolve_project_image_path(raw: str) -> str:
     return f"/images/{normalized}"
 
 
+def resolve_site_href(raw: str) -> str:
+    value = clean_plain_text(raw)
+    if not value:
+        return ""
+    if URL_RE.match(value) or value.startswith("/"):
+        return value
+    normalized = value.lstrip("./")
+    return f"/{normalized}"
+
+
 def resolve_doi_url(raw: str) -> str:
     value = clean_plain_text(raw)
     if not value:
@@ -278,6 +298,7 @@ def render_project_item(row: dict[str, str]) -> str:
     award = clean_plain_text(row.get("award", ""))
     image_path = resolve_project_image_path(row.get("image", ""))
     doi_url = resolve_doi_url(row.get("doi", ""))
+    paper_href = resolve_site_href(row.get("paper_url", ""))
 
     title_html = html.escape(title or "Untitled Project")
     authors_html = html.escape(authors)
@@ -292,6 +313,11 @@ def render_project_item(row: dict[str, str]) -> str:
         authors_html,
     )
     venue_html = html.escape(venue)
+    if paper_href:
+        paper_html = html.escape(paper_href, quote=True)
+        venue_html = (
+            f'{venue_html} <a href="{paper_html}" target="_blank" rel="noopener noreferrer">[pdf]</a>'
+        )
     award_html = html.escape(award)
     image_html = html.escape(image_path, quote=True)
     alt_html = html.escape(title or "Project image", quote=True)
