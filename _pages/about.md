@@ -60,7 +60,7 @@ Resercher at Miraikan Accessibility Lab.
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/coming_soon.jpg" alt="Map-less Navigation for Blind People" loading="lazy"></div>
+  <div class="project-item__media"><img src="/data/project/masaki_kuribayashi_phd_thesis_2026/image.png" alt="Map-less Navigation for Blind People" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Map-less Navigation for Blind People</div>
     <div class="project-item__venue">PhD Thesis <a href="/data/project/masaki_kuribayashi_phd_thesis_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
